@@ -1,4 +1,6 @@
-(function run(){
-    var el = document.querySelector('body')
-    el.innerHTML += `<div style="width: 300px; height: 300px; background-color: gold;"></div>`;
+(async function run(){
+    var el = document.querySelector('body');
+    const response = await fetch('/index.html');
+    const html = await response.text();
+    el.insertAdjacentHTML("afterbegin", html);
 })();
