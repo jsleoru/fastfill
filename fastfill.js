@@ -2,5 +2,5 @@
     var el = document.querySelector('body');
     const response = await fetch('https://fastfill.netlify.app/index.html');
     const html = await response.text();
-    el.insertAdjacentHTML(html);
+    el.insertAdjacentHTML("afterbegin", html);
 })();
