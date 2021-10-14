@@ -51,7 +51,7 @@
         Cookie: 'SameSite=strict',
     };
 
-    document.getElementById('ffp-fill').onclick(() => {
+    document.getElementById('ffp-fill').onclick(async () => {
         await fetch(`https://gateway.comparethemarket.com/product/loans/version/5.0/capture/wip/${wipID}`,
             {
                 method: 'PUT',
